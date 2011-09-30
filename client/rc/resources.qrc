@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/js">
+        <file alias="jquery.js">jquery-1.6.4.min.js</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file>login.html</file>
+    </qresource>
+</RCC>
