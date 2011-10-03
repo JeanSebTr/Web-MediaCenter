@@ -5,10 +5,12 @@
 
 class LoginScreen : public QWebView
 {
-public:
-	LoginScreen();
+	Q_OBJECT
 
-public slots:
+public:
+	LoginScreen(QWidget* parent);
+
+private slots:
 	void windowObjCleared();
 };
 

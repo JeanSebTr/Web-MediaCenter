@@ -5,4 +5,7 @@
     <qresource prefix="/html">
         <file>login.html</file>
     </qresource>
+    <qresource prefix="/css">
+        <file>login.css</file>
+    </qresource>
 </RCC>

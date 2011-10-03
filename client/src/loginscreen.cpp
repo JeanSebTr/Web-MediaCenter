@@ -1,10 +1,10 @@
 #include "loginscreen.h"
 
-LoginScreen::LoginScreen() : QWebView()
+LoginScreen::LoginScreen(QWidget* parent) : QWebView(parent)
 {
-        connect(this->page()->mainFrame(), SIGNAL(javaScriptWindowObjectCleared()),
-                this, SLOT(windowObjCleared()));
-        this->setUrl(QUrl("qrc:/html/login.html"));
+		connect(this->page()->mainFrame(), SIGNAL(javaScriptWindowObjectCleared()),
+				SLOT(windowObjCleared()));
+		this->setUrl(QUrl("qrc:/html/login.html"));
 }
 
 void LoginScreen::windowObjCleared()

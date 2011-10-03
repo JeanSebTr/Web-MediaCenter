@@ -6,16 +6,23 @@
 
 #include "loginscreen.h"
 
-class App
+class App : public QWidget
 {
-public:
-	App();
+	Q_OBJECT
 
-	void Init();
-        QString getJQuery();
+public:
+	enum
+	{
+		MAIN_PROCESS,
+		SUB_PROCESS
+	} PROCESS_MODE;
+
+	App(int mode);
+protected:
+	void resizeEvent(QResizeEvent *event);
 private:
-        LoginScreen* _loginScreen;
-	QString jquery;
+	int mode;
+	LoginScreen* login;
 };
 
 #endif // APP_H
